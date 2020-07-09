@@ -1,30 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# God Run
 
-## Getting Started
+Done for Hob hobbWeird
 
-First, run the development server:
+## How To Use
 
-```bash
-npm run dev
-# or
-yarn dev
+### Big Saquare Buttons
+
+These buttons are text inputs where you can change de name of the games. For this version accepted names are: ds, sk, bb, d1, d2, d3.
+When you hover those buttons you can set the status of the game:
+
+**Active**: Will color the button blue and it will load the splits for that particular game.
+**Done**: Will color the button green meaning the game was beaten
+**Undo**: Will only appear if you clicked on done before, will revert the status of the game to red meaning it has not been beaten yet.
+
+### Splits
+
+On the splits just click the red circle to make it green, meaning it was beaten. Click it again to rever this status
+
+## Dev Enviroment
+
+```
+yarn install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+And then to start the development environment you run
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+ ```
+yarn run dev
+```
 
-## Learn More
+## License
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+MIT © Turbofacu 2018
