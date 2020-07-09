@@ -11,7 +11,6 @@ const Split = ({ name }) => {
           display: flex;
           justify-content: space-between;
           margin-bottom: 8px;
-          cursor: pointer;
         }
 
         p {
@@ -24,6 +23,7 @@ const Split = ({ name }) => {
           width: 20px;
           height: 20px;
           border-radius: 100%;
+          cursor: pointer;
         }
 
         span.green {
