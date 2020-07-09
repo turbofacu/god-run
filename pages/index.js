@@ -22,7 +22,7 @@ export default class Home extends React.Component {
   }
 
   render() {
-    const { currentSplits, activeGame, gamesDone } = this.state; 
+    const { currentSplits, activeGame } = this.state; 
     return (
       <main>
         <Head>
@@ -34,37 +34,31 @@ export default class Home extends React.Component {
             <Game 
               value="d1" 
               activeGame={activeGame} 
-              gamesDone={gamesDone} 
               onChangeActiveGame={this.onChangeActiveGame}
             />
             <Game 
               value="sk" 
               activeGame={activeGame} 
-              gamesDone={gamesDone} 
               onChangeActiveGame={this.onChangeActiveGame}
             />
             <Game 
               value="d3" 
               activeGame={activeGame} 
-              gamesDone={gamesDone} 
               onChangeActiveGame={this.onChangeActiveGame}
             />
             <Game 
               value="ds" 
               activeGame={activeGame} 
-              gamesDone={gamesDone} 
               onChangeActiveGame={this.onChangeActiveGame}
             />
             <Game 
               value="d2" 
               activeGame={activeGame} 
-              gamesDone={gamesDone} 
               onChangeActiveGame={this.onChangeActiveGame}
             />
             <Game 
               value="bb" 
               activeGame={activeGame} 
-              gamesDone={gamesDone} 
               onChangeActiveGame={this.onChangeActiveGame}
             />
           </ul>

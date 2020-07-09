@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import cn from 'classnames';
 
-const Game = ({ value, activeGame, gamesDone, onChangeActiveGame }) => {
+const Game = ({ value, activeGame, onChangeActiveGame }) => {
   const [inputValue, setInputValue] = useState(value);
   const [gameDone, setGameDone] = useState(false);
   const myRef = useRef(null);
