@@ -2,7 +2,7 @@ const webpack = require('webpack')
 
 const isProd = (process.env.NODE_ENV || 'production') === 'production'
 
-const assetPrefix = isProd ? '/your-repository-name' : ''
+const assetPrefix = isProd ? '/turbofacu' : ''
 
 module.exports = {
   exportPathMap: () => ({
@@ -15,7 +15,6 @@ module.exports = {
         'process.env.ASSET_PREFIX': JSON.stringify(assetPrefix),
       }),
     )
-
     return config
   },
 }
