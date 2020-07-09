@@ -64,7 +64,7 @@ export default class Home extends React.Component {
           </ul>
           <ul className="splits">
             {currentSplits && (
-              currentSplits.map(split => <Split name={split} /> )
+              currentSplits.map((split, i) => <Split name={split} key={`${split}-${i}`}/> )
             )}
             {!currentSplits && <li style={{ color: 'white' }}>There are no splits for this games hobbWeird</li>}
           </ul>
