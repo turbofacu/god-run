@@ -2,7 +2,7 @@ const webpack = require('webpack')
 
 const isProd = (process.env.NODE_ENV || 'production') === 'production'
 
-const assetPrefix = isProd ? '/turbofacu.github.io/god-run/' : ''
+const assetPrefix = isProd ? '/god-run' : ''
 
 module.exports = {
   exportPathMap: () => ({
