@@ -1,12 +1,13 @@
 import React, { useState, useRef } from 'react';
 import cn from 'classnames';
 
-const Game = ({ value, activeGame, gamesDone, onChangeActiveGame, onGameDone }) => {
+const Game = ({ value, activeGame, gamesDone, onChangeActiveGame }) => {
   const [inputValue, setInputValue] = useState(value);
+  const [gameDone, setGameDone] = useState(false);
   const myRef = useRef(null);
   return (
-    <li className={cn(activeGame === value ? 'active' : '', gamesDone.includes(value) ? 'done' : '')}>
-      <div className="action done" onClick={() => onGameDone(myRef.current.value)}>done</div>
+    <li className={cn(activeGame === inputValue ? 'active' : '', gameDone ? 'done' : '')}>
+      <div className="action status" onClick={() => setGameDone(!gameDone)}>{!gameDone ? 'done' : 'undo'}</div>
       <input type="text" value={inputValue} ref={myRef} onChange={e => setInputValue(e.target.value)} />
       <div className="action active" onClick={() => onChangeActiveGame(myRef.current.value)}>active</div>
       <style jsx>{`
@@ -31,11 +32,11 @@ const Game = ({ value, activeGame, gamesDone, onChangeActiveGame, onGameDone }) 
         }
 
         li.done {
-          border-color: green;
+          border-color: green !important;
         }
 
         li.done input {
-          color: green;
+          color: green !important;
         }
 
         input {
@@ -65,7 +66,7 @@ const Game = ({ value, activeGame, gamesDone, onChangeActiveGame, onGameDone }) 
           cursor: pointer;
         }
 
-        .action.done {
+        .action.status {
           top: -20px;
         }
 

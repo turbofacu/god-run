@@ -11,7 +11,6 @@ export default class Home extends React.Component {
     this.state = {
       currentSplits: splits.d1,
       activeGame: 'd1',
-      gamesDone: [],
     };
   }
 
@@ -19,14 +18,6 @@ export default class Home extends React.Component {
     this.setState({ 
       currentSplits: splits[value.toLowerCase()],
       activeGame: value.toLowerCase(),
-    });
-  }
-
-  onGameDone = (value) => {
-    const newGamesDone = this.state.gamesDone;
-    newGamesDone.push(value);
-    this.setState({ 
-      gamesDone: newGamesDone,
     });
   }
 
@@ -45,42 +36,36 @@ export default class Home extends React.Component {
               activeGame={activeGame} 
               gamesDone={gamesDone} 
               onChangeActiveGame={this.onChangeActiveGame}
-              onGameDone={this.onGameDone}
             />
             <Game 
               value="sk" 
               activeGame={activeGame} 
               gamesDone={gamesDone} 
               onChangeActiveGame={this.onChangeActiveGame}
-              onGameDone={this.onGameDone}
             />
             <Game 
               value="d3" 
               activeGame={activeGame} 
               gamesDone={gamesDone} 
               onChangeActiveGame={this.onChangeActiveGame}
-              onGameDone={this.onGameDone}
             />
             <Game 
               value="ds" 
               activeGame={activeGame} 
               gamesDone={gamesDone} 
               onChangeActiveGame={this.onChangeActiveGame}
-              onGameDone={this.onGameDone}
             />
             <Game 
               value="d2" 
               activeGame={activeGame} 
               gamesDone={gamesDone} 
               onChangeActiveGame={this.onChangeActiveGame}
-              onGameDone={this.onGameDone}
             />
             <Game 
               value="bb" 
               activeGame={activeGame} 
               gamesDone={gamesDone} 
               onChangeActiveGame={this.onChangeActiveGame}
-              onGameDone={this.onGameDone}
             />
           </ul>
           <ul className="splits">
